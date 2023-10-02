@@ -8,5 +8,5 @@
 import Foundation
 
 enum RepoParameterKeys {
-    case name
+    case id
 }

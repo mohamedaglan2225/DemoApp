@@ -68,6 +68,11 @@ extension RepositoriesController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = AppStoryboards.main.instantiate(RepositoriesDetails.self)
+        self.push(vc)
+    }
 }
 
 

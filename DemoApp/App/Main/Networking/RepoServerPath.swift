@@ -9,6 +9,7 @@ import Foundation
 
 enum RepoServerPath {
     case repositories
+    case repositoriesDetails(id: Int)
 }
 
 
@@ -17,6 +18,9 @@ extension RepoServerPath: ServerPath {
         switch self {
         case .repositories:
             return "repositories"
+            
+        case .repositoriesDetails(let id):
+            return "repositories/\(id)"
         }
     }
 }
