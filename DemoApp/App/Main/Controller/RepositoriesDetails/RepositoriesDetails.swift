@@ -41,6 +41,8 @@ class RepositoriesDetails: BaseVC {
     
     //MARK: - Business Logic -
     func formatDate(dateString: String) -> String {
+        // Change Date Format To Calculate if the date is less than 6 months ago, use the following format Thursday, Oct 22, 2020.
+        // else use: “8 months ago”, “2 years ago” etc
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
@@ -78,11 +80,6 @@ class RepositoriesDetails: BaseVC {
 //MARK: - Networking -
 extension RepositoriesDetails {
     
-}
-
-//MARK: - Routes -
-extension RepositoriesDetails {
-    
     private func getRepoDetailsApi(id: Int) {
         self.showIndicator()
         RepoRouter.repositoriesDetails(id: id).send { [weak self] (response:RepoDetailsModel) in
@@ -111,6 +108,5 @@ extension RepositoriesDetails {
             self.push(vc)
         }
     }
-    
     
 }

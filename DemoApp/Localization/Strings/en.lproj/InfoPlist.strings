@@ -5,7 +5,7 @@
   
 */
 
-"CFBundleDisplayName" = "App Name";
+"CFBundleDisplayName" = "Demo Test";
 "NSCameraUsageDescription" = "to pick your order picture";
 "NSLocationAlwaysAndWhenInUseUsageDescription" = "to get nearest estates around you";
 "NSLocationAlwaysUsageDescription" = "to get nearest estates around you";

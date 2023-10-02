@@ -93,7 +93,6 @@
 		2CBC94BA286D0C4400E42AB5 /* PhotosUI.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC94BC286D0C4400E42AB5 /* PhotosUI.strings */; };
 		2CBC94BE286D0C6D00E42AB5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC94C0286D0C6D00E42AB5 /* Localizable.strings */; };
 		2CBD858028063F380036C9B1 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBD857F28063F380036C9B1 /* Print.swift */; };
-		2CE14366280C02B500A601F5 /* indicatorGifImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2CE14365280C02B400A601F5 /* indicatorGifImage.gif */; };
 		2CE14368280C067100A601F5 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE14367280C067100A601F5 /* UITextView.swift */; };
 		2CE1436A280C06DC00A601F5 /* CollectionViewContentSized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE14369280C06DC00A601F5 /* CollectionViewContentSized.swift */; };
 		2CF41C7D28FC1F7E00BF923D /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF41C7C28FC1F7E00BF923D /* Locator.swift */; };
@@ -118,6 +117,7 @@
 		38413D072ACB460B0015C749 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38413D062ACB460B0015C749 /* UserDetailsController.swift */; };
 		38413D092ACB46E40015C749 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38413D082ACB46E40015C749 /* UserDetailsModel.swift */; };
 		38F39A052ACB08C600EA82FF /* RepoDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F39A042ACB08C600EA82FF /* RepoDetailsModel.swift */; };
+		38F6D5DB2ACB556800CA931E /* indicatorGifImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 38F6D5DA2ACB556800CA931E /* indicatorGifImage.gif */; };
 		4FAEDB5169C6AEA7E045634A /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693C3B7661285BF99A6B40FD /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,7 +220,6 @@
 		2CBC94BF286D0C6D00E42AB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CBC94C1286D0C7000E42AB5 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CBD857F28063F380036C9B1 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
-		2CE14365280C02B400A601F5 /* indicatorGifImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = indicatorGifImage.gif; sourceTree = "<group>"; };
 		2CE14367280C067100A601F5 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		2CE14369280C06DC00A601F5 /* CollectionViewContentSized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContentSized.swift; sourceTree = "<group>"; };
 		2CF41C7C28FC1F7E00BF923D /* Locator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
@@ -245,6 +244,7 @@
 		38413D062ACB460B0015C749 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		38413D082ACB46E40015C749 /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
 		38F39A042ACB08C600EA82FF /* RepoDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsModel.swift; sourceTree = "<group>"; };
+		38F6D5DA2ACB556800CA931E /* indicatorGifImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = indicatorGifImage.gif; sourceTree = "<group>"; };
 		4C19E91C0575B5B429A5C441 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		693C3B7661285BF99A6B40FD /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A16EDA7D9643A45809C6A2 /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -355,9 +355,9 @@
 			isa = PBXGroup;
 			children = (
 				3809B3182ACACD630082CE45 /* Networking */,
-				3809B3212ACAD3F40082CE45 /* Controller */,
-				2C178CA727F7C19600D32327 /* View */,
 				3809B3222ACAE5700082CE45 /* Model */,
+				2C178CA727F7C19600D32327 /* View */,
+				3809B3212ACAD3F40082CE45 /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -672,7 +672,7 @@
 		2CE14364280C022600A601F5 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				2CE14365280C02B400A601F5 /* indicatorGifImage.gif */,
+				38F6D5DA2ACB556800CA931E /* indicatorGifImage.gif */,
 			);
 			path = Gifs;
 			sourceTree = "<group>";
@@ -853,11 +853,11 @@
 				2C5FD59F286DED39002DB350 /* StarRatingStackView.xib in Resources */,
 				3809B3172ACAC4740082CE45 /* RepoCell.xib in Resources */,
 				2C178CC227F7C29000D32327 /* Cairo-Medium.ttf in Resources */,
-				2CE14366280C02B500A601F5 /* indicatorGifImage.gif in Resources */,
 				2CBC94AA286D0BC500E42AB5 /* InfoPlist.strings in Resources */,
 				2C178CC327F7C29000D32327 /* Cairo-Regular.ttf in Resources */,
 				2CBC94BA286D0C4400E42AB5 /* PhotosUI.strings in Resources */,
 				2CF41C9828FC217C00BF923D /* SliderView.xib in Resources */,
+				38F6D5DB2ACB556800CA931E /* indicatorGifImage.gif in Resources */,
 				2CBC9498286D078F00E42AB5 /* ValidationLocalized.strings in Resources */,
 				2CBC94BE286D0C6D00E42AB5 /* Localizable.strings in Resources */,
 				2C178C9D27F7BBF800D32327 /* LaunchScreen.storyboard in Resources */,
@@ -1245,7 +1245,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZUMG9R88LL;
+				DEVELOPMENT_TEAM = 69J7L8UL9S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoApp/Core/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to camera to take a picture for your profile.";
@@ -1269,7 +1269,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 0.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aait.UIKit-Tempelate-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.try-demo-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1288,7 +1288,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZUMG9R88LL;
+				DEVELOPMENT_TEAM = 69J7L8UL9S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoApp/Core/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow access to camera to take a picture for your profile.";
@@ -1312,7 +1312,7 @@
 					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 0.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aait.UIKit-Tempelate-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.try-demo-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

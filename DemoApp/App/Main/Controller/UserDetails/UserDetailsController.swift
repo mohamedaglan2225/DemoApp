@@ -35,10 +35,6 @@ class UserDetailsController: BaseVC {
     }
     
     
-    
-    //MARK: - IBActions -
-    
-    
 
 }
 
@@ -52,16 +48,14 @@ extension UserDetailsController {
         companyName.text = model.company
         userLocation.text = model.location
         userEmail.text = model.email
-        if userEmail.text == "" {
-            userEmail.text = "Not Detected"
+        userTwitterName.text = model.twitterUsername
+        if userEmail.text == nil {
+            userEmail.text = "------"
         }
-        
-        if model.twitterUsername?.isEmpty == true {
-            userTwitterName.text = "Not Detected"
-        }else {
-            userTwitterName.text = model.twitterUsername
+        if userTwitterName.text == nil {
+            userTwitterName.text = "------"
         }
-        
+
     }
     
     
