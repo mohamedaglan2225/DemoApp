@@ -13,7 +13,6 @@ class RepoCell: UITableViewCell {
     @IBOutlet weak var repoImage: UIImageView!
     @IBOutlet weak var repoName: UILabel!
     @IBOutlet weak var repoOwnerName: UILabel!
-    @IBOutlet weak var repoDate: UILabel!
     
     
     //MARK: - LifeCycle Events -

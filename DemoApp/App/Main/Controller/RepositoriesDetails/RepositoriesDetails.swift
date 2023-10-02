@@ -10,6 +10,7 @@ import UIKit
 class RepositoriesDetails: BaseVC {
     
     //MARK: - IBOutlets -
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var repoDescription: UILabel!
@@ -19,14 +20,22 @@ class RepositoriesDetails: BaseVC {
     
     
     //MARK: - Properties -
-    
-    
+    var userId: Int?
+    private var ownerLogin:String?
     
     
     // MARK: - Lifecycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRepoDetailsApi(id: 26)
+        handleInitialDesign()
+    }
+    
+    
+    //MARK: - Handle Initial Load -
+    private func handleInitialDesign() {
+        scrollView.alpha = 0
+        guard let id = userId else {return}
+        getRepoDetailsApi(id: id)
     }
     
     
@@ -57,7 +66,11 @@ class RepositoriesDetails: BaseVC {
     
     
     //MARK: - Actions -
-
+    @IBAction func showMoreButtonPressed(_ sender: UIButton) {
+        guard let loginId = ownerLogin else {return}
+        self.getUserDetailsApi(name: loginId)
+    }
+    
     
 }
 
@@ -75,12 +88,29 @@ extension RepositoriesDetails {
         RepoRouter.repositoriesDetails(id: id).send { [weak self] (response:RepoDetailsModel) in
             guard let self = self else {return}
             self.hideIndicator()
+            self.scrollView.alpha = 1
             self.userImage.setWith(url: response.owner?.avatarUrl)
             self.userName.text = response.owner?.login
             self.repoDate.text = formatDate(dateString: response.createdAt ?? "")
             self.repoDescription.text = response.description
             self.repoUrl.text = response.url
             self.repoLanguage.text = response.language
+            self.ownerLogin = response.owner?.login
         }
     }
+    
+    
+    
+    private func getUserDetailsApi(name: String) {
+        showIndicator()
+        RepoRouter.users(name: name).send { [weak self] (response:UserDetailsModel) in
+            guard let self = self else {return}
+            self.hideIndicator()
+            let vc = AppStoryboards.main.instantiate(UserDetailsController.self)
+            vc.userModel = response
+            self.push(vc)
+        }
+    }
+    
+    
 }

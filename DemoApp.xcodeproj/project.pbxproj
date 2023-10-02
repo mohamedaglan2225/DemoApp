@@ -115,6 +115,8 @@
 		3809B31C2ACACD760082CE45 /* RepoServerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809B31B2ACACD760082CE45 /* RepoServerPath.swift */; };
 		3809B31E2ACACD7C0082CE45 /* RepoParameterKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809B31D2ACACD7C0082CE45 /* RepoParameterKeys.swift */; };
 		3809B3202ACACFCF0082CE45 /* RepositoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809B31F2ACACFCF0082CE45 /* RepositoriesModel.swift */; };
+		38413D072ACB460B0015C749 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38413D062ACB460B0015C749 /* UserDetailsController.swift */; };
+		38413D092ACB46E40015C749 /* UserDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38413D082ACB46E40015C749 /* UserDetailsModel.swift */; };
 		38F39A052ACB08C600EA82FF /* RepoDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F39A042ACB08C600EA82FF /* RepoDetailsModel.swift */; };
 		4FAEDB5169C6AEA7E045634A /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693C3B7661285BF99A6B40FD /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
@@ -240,6 +242,8 @@
 		3809B31B2ACACD760082CE45 /* RepoServerPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoServerPath.swift; sourceTree = "<group>"; };
 		3809B31D2ACACD7C0082CE45 /* RepoParameterKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoParameterKeys.swift; sourceTree = "<group>"; };
 		3809B31F2ACACFCF0082CE45 /* RepositoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesModel.swift; sourceTree = "<group>"; };
+		38413D062ACB460B0015C749 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
+		38413D082ACB46E40015C749 /* UserDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsModel.swift; sourceTree = "<group>"; };
 		38F39A042ACB08C600EA82FF /* RepoDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsModel.swift; sourceTree = "<group>"; };
 		4C19E91C0575B5B429A5C441 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		693C3B7661285BF99A6B40FD /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -753,6 +757,7 @@
 			children = (
 				2C178CA827F7C1AE00D32327 /* Repositories */,
 				2C1E901127FA7773005C8B7E /* RepositoriesDetails */,
+				38413D052ACB45F90015C749 /* UserDetails */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -762,8 +767,17 @@
 			children = (
 				3809B31F2ACACFCF0082CE45 /* RepositoriesModel.swift */,
 				38F39A042ACB08C600EA82FF /* RepoDetailsModel.swift */,
+				38413D082ACB46E40015C749 /* UserDetailsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		38413D052ACB45F90015C749 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				38413D062ACB460B0015C749 /* UserDetailsController.swift */,
+			);
+			path = UserDetails;
 			sourceTree = "<group>";
 		};
 		C3CD5C9B69870F90743EAAB7 /* Frameworks */ = {
@@ -951,6 +965,7 @@
 				2C178D1F27F7CAF900D32327 /* UI+String.swift in Sources */,
 				2C44B8512800DD8700728351 /* AlertView.swift in Sources */,
 				2C178CD527F7C2DC00D32327 /* Extensions+UITextField.swift in Sources */,
+				38413D092ACB46E40015C749 /* UserDetailsModel.swift in Sources */,
 				2CF41C9928FC217C00BF923D /* SliderView.swift in Sources */,
 				2C178CE127F7C34A00D32327 /* PushNotifications.swift in Sources */,
 				2C178D2527F7CAF900D32327 /* UISegmentedControl.swift in Sources */,
@@ -965,6 +980,7 @@
 				2C178CF227F7C46E00D32327 /* APIGloabelResponse.swift in Sources */,
 				2C178CF027F7C46E00D32327 /* UploadData.swift in Sources */,
 				2C178D4527F7D0E200D32327 /* RepositoriesController.swift in Sources */,
+				38413D072ACB460B0015C749 /* UserDetailsController.swift in Sources */,
 				2C5FD5A2286DED39002DB350 /* StarRatingView.swift in Sources */,
 				2CE14368280C067100A601F5 /* UITextView.swift in Sources */,
 				2C178D2427F7CAF900D32327 /* UILabel.swift in Sources */,

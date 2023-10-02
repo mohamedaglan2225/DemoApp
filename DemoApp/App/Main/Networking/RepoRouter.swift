@@ -10,6 +10,7 @@ import Alamofire
 enum RepoRouter {
     case repositories
     case repositoriesDetails(id: Int)
+    case users(name:String)
 }
 
 
@@ -22,6 +23,9 @@ extension RepoRouter: APIRouter {
             
         case .repositoriesDetails:
             return .get
+            
+        case .users:
+            return .get
         }
     }
     
@@ -33,6 +37,9 @@ extension RepoRouter: APIRouter {
             
         case .repositoriesDetails(let id):
             return RepoServerPath.repositoriesDetails(id: id)
+            
+        case .users(let name):
+            return RepoServerPath.users(name: name)
         }
     }
     
@@ -43,6 +50,9 @@ extension RepoRouter: APIRouter {
             return nil
             
         case .repositoriesDetails:
+            return nil
+            
+        case .users:
             return nil
         }
     }

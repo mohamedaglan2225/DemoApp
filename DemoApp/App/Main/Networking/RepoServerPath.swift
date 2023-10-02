@@ -10,6 +10,7 @@ import Foundation
 enum RepoServerPath {
     case repositories
     case repositoriesDetails(id: Int)
+    case users(name: String)
 }
 
 
@@ -21,6 +22,9 @@ extension RepoServerPath: ServerPath {
             
         case .repositoriesDetails(let id):
             return "repositories/\(id)"
+            
+        case .users(let name):
+            return "users/\(name)"
         }
     }
 }

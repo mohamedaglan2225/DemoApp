@@ -45,12 +45,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjW-mU-KAg">
-                                <rect key="frame" x="265.66666666666669" y="8" width="30.333333333333314" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -58,8 +52,6 @@
                             <constraint firstItem="enp-Vk-UDl" firstAttribute="centerY" secondItem="atn-7M-AAg" secondAttribute="centerY" id="9h5-Js-HCw"/>
                             <constraint firstItem="ZME-vC-ypu" firstAttribute="leading" secondItem="atn-7M-AAg" secondAttribute="leading" constant="8" id="AFt-Ub-aPo"/>
                             <constraint firstItem="enp-Vk-UDl" firstAttribute="leading" secondItem="ZME-vC-ypu" secondAttribute="trailing" constant="4" id="Hg8-qI-53Y"/>
-                            <constraint firstItem="GjW-mU-KAg" firstAttribute="top" secondItem="atn-7M-AAg" secondAttribute="top" constant="8" id="IfW-sH-yOc"/>
-                            <constraint firstAttribute="trailing" secondItem="GjW-mU-KAg" secondAttribute="trailing" constant="8" id="TGd-PY-o83"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -73,7 +65,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="repoDate" destination="GjW-mU-KAg" id="MwZ-jQ-Sxh"/>
                 <outlet property="repoImage" destination="ZME-vC-ypu" id="Y9r-Wb-m2H"/>
                 <outlet property="repoName" destination="wgE-uU-ACc" id="xK8-3d-FUK"/>
                 <outlet property="repoOwnerName" destination="IqC-P5-hPP" id="ild-ir-y1x"/>

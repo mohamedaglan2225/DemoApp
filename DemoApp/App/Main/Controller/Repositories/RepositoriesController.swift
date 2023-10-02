@@ -71,6 +71,7 @@ extension RepositoriesController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = AppStoryboards.main.instantiate(RepositoriesDetails.self)
+        vc.userId = reposModel[indexPath.row].id
         self.push(vc)
     }
 }
