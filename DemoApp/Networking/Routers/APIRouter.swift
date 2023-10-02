@@ -125,7 +125,7 @@ extension APIRouter {
             do {
                 let decoder = JSONDecoder()
                 let valueObject  = try decoder.decode(T.self, from: value)
-                
+                completion(valueObject ,nil)
                 if let value = valueObject as? APIGlobalResponse {
                     switch value.key {
                     case .success:
@@ -137,7 +137,7 @@ extension APIRouter {
                         UserDefaults.user = nil
                         UserDefaults.accessToken = nil
                         UserDefaults.isLogin = false
-                        let vc = SplashVC.create()
+                        let vc = RepositoriesController.create()
                         AppHelper.changeWindowRoot(vc: vc)
                     }
                 }

@@ -99,7 +99,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         UserDefaults.isLogin = false
         UserDefaults.accessToken = nil
         UserDefaults.user = nil
-        let vc = SplashVC.create()
+        let vc = RepositoriesController.create()
         AppHelper.changeWindowRoot(vc: vc, options: .transitionCurlDown)
     }
     

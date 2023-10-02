@@ -17,7 +17,7 @@ class BaseVC: UIViewController, UIGestureRecognizerDelegate {
     
     //MARK: - Design -
     private func setupBaseVC() {
-        self.view.backgroundColor = Theme.colors.mainBackgroundColor
+//        self.view.backgroundColor = Theme.colors.mainBackgroundColor
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
@@ -29,6 +29,53 @@ class BaseVC: UIViewController, UIGestureRecognizerDelegate {
         self.navigationItem.titleView = imageView
     }
     
+    func addBackButtonWith(title: String) {
+        let button = UIButton()
+        if Language.isRTL() {
+            button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        }else {
+            button.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+        }
+        button.tintColor = UIColor.black
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.textColor = UIColor.black
+        button.isUserInteractionEnabled = false
+        let stack = UIStackView.init(arrangedSubviews: [button, titleLabel])
+        stack.axis = .horizontal
+        stack.spacing = 8
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.backButtonPressed))
+        stack.addGestureRecognizer(tap)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: stack)
+    }
+    
+    func addAuthBackButtonWith(title: String) {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "arrow.backward"), for: .normal)
+        button.tintColor = UIColor.black
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.textColor = UIColor.black
+        button.isUserInteractionEnabled = false
+        let stack = UIStackView.init(arrangedSubviews: [button, titleLabel])
+        stack.axis = .horizontal
+        stack.spacing = 8
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.backButtonPressed))
+        stack.addGestureRecognizer(tap)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: stack)
+    }
+    
+    func setLeading(title: String?) {
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.textColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: titleLabel)
+    }
+    
+    
     func changeNavigationBar(alpha: CGFloat) {
         self.navigationController?.navigationBar.subviews.first?.alpha = alpha
     }
@@ -38,6 +85,12 @@ class BaseVC: UIViewController, UIGestureRecognizerDelegate {
         print("\(NSStringFromClass(self.classForCoder).components(separatedBy: ".").last ?? "BaseVC") is deinit, No memory leak found")
     }
     
+    
+    //MARK: - Actions -
+    @objc func backButtonPressed() {
+        self.pop()
+    }
+
     
 }
 
@@ -103,6 +156,17 @@ extension BaseVC {
     }
     func pop(animated: Bool = true) {
         self.navigationController?.popViewController(animated: animated)
+    }
+    func pop(animated: Bool = true, completion: @escaping () -> Void) {
+        navigationController?.popViewController(animated: animated)
+        
+        if animated, let coordinator = transitionCoordinator {
+            coordinator.animate(alongsideTransition: nil) { _ in
+                completion()
+            }
+        } else {
+            completion()
+        }
     }
     func popToRoot(animated: Bool = true) {
         self.navigationController?.popToRootViewController(animated: true)

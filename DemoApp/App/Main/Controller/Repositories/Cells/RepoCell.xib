@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="RepoCell" customModule="DemoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atn-7M-AAg">
+                        <rect key="frame" x="8" y="8" width="304" height="97"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZME-vC-ypu">
+                                <rect key="frame" x="8" y="13.666666666666671" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0mA-L8-cba"/>
+                                    <constraint firstAttribute="width" constant="70" id="zUn-6D-23b"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="enp-Vk-UDl">
+                                <rect key="frame" x="82" y="27.666666666666664" width="116" height="41.999999999999993"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgE-uU-ACc">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo owner name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqC-P5-hPP">
+                                        <rect key="frame" x="0.0" y="25" width="116" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjW-mU-KAg">
+                                <rect key="frame" x="265.66666666666669" y="8" width="30.333333333333314" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZME-vC-ypu" firstAttribute="centerY" secondItem="atn-7M-AAg" secondAttribute="centerY" id="4WO-sO-Ijk"/>
+                            <constraint firstItem="enp-Vk-UDl" firstAttribute="centerY" secondItem="atn-7M-AAg" secondAttribute="centerY" id="9h5-Js-HCw"/>
+                            <constraint firstItem="ZME-vC-ypu" firstAttribute="leading" secondItem="atn-7M-AAg" secondAttribute="leading" constant="8" id="AFt-Ub-aPo"/>
+                            <constraint firstItem="enp-Vk-UDl" firstAttribute="leading" secondItem="ZME-vC-ypu" secondAttribute="trailing" constant="4" id="Hg8-qI-53Y"/>
+                            <constraint firstItem="GjW-mU-KAg" firstAttribute="top" secondItem="atn-7M-AAg" secondAttribute="top" constant="8" id="IfW-sH-yOc"/>
+                            <constraint firstAttribute="trailing" secondItem="GjW-mU-KAg" secondAttribute="trailing" constant="8" id="TGd-PY-o83"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="atn-7M-AAg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Pav-Bo-mG3"/>
+                    <constraint firstAttribute="bottom" secondItem="atn-7M-AAg" secondAttribute="bottom" constant="8" id="X0U-o7-pB3"/>
+                    <constraint firstAttribute="trailing" secondItem="atn-7M-AAg" secondAttribute="trailing" constant="8" id="dpm-hY-Mf9"/>
+                    <constraint firstItem="atn-7M-AAg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="i2c-ny-TGc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="repoDate" destination="GjW-mU-KAg" id="MwZ-jQ-Sxh"/>
+                <outlet property="repoImage" destination="ZME-vC-ypu" id="Y9r-Wb-m2H"/>
+                <outlet property="repoName" destination="wgE-uU-ACc" id="xK8-3d-FUK"/>
+                <outlet property="repoOwnerName" destination="IqC-P5-hPP" id="ild-ir-y1x"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="44.014084507042256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

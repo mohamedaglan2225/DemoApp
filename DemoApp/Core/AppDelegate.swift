@@ -83,6 +83,6 @@ extension AppDelegate {
     private func setFakeData() {
     //    UserDefaults.isLogin = false
     //    UserDefaults.isFirstTime = true
-        UserDefaults.accessToken = "214|VSnj6aeHhfZOYJ4DPKrLcuVOKqn1GqNybM29yBqb"
+//        UserDefaults.accessToken = "214|VSnj6aeHhfZOYJ4DPKrLcuVOKqn1GqNybM29yBqb"
     }
 }
